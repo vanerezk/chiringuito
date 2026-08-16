@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-sand-50 text-sea-800 antialiased;
+    background-image:
+      radial-gradient(circle at top left, rgba(255, 255, 255, 0.72), transparent 26%),
+      radial-gradient(circle at right top, rgba(103, 181, 221, 0.12), transparent 24%),
+      linear-gradient(180deg, #fbf8f2 0%, #f7f2e8 44%, #edf4f7 100%);
+  }
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-padding {
+    @apply py-20 sm:py-24;
+  }
+
+  .section-kicker {
+    @apply text-sm font-bold uppercase tracking-[0.34em] text-sea-600;
+  }
+
+  .section-title {
+    @apply mt-2 font-serif text-4xl font-semibold text-sea-800 sm:text-5xl;
+  }
+
+  .card-shell {
+    @apply rounded-[2rem] bg-white shadow-soft transition duration-300 hover:-translate-y-1 hover:shadow-premium;
+  }
+
+  .glass-panel {
+    @apply rounded-3xl border border-white/35 bg-white/60 backdrop-blur-md;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-full bg-sea-700 px-6 py-3.5 font-bold text-white transition hover:-translate-y-0.5 hover:bg-sea-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sea-500;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center rounded-full border border-sea-200 bg-sand-50 px-6 py-3.5 font-bold text-sea-800 transition hover:-translate-y-0.5 hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sea-300;
+  }
+
+  .reveal-item {
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity 650ms ease, transform 650ms ease;
+  }
+
+  .reveal-item.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal-item,
+    .reveal-item.is-visible {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+  }
+}
