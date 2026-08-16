@@ -1,12 +1,20 @@
 export const menuPdfPath = '/assets/menu.pdf';
 
+import berenjenaImage from '../assets/berenjena.png';
+import boqueronesImage from '../assets/boquerones.png';
+import foodImage from '../assets/food.png';
+import langostaImage from '../assets/langosta.png';
+import lastImage from '../assets/last.png';
+import paellaImage from '../assets/paella.png';
+import terrazaImage from '../assets/terraza.png';
+
 const sharedGallery = [
-  {image: '/assets/food.png'},
-  {image: '/assets/food2.png'},
-  {image: '/assets/food3.png'},
-  {image: '/assets/food5.png'},
-  {image: '/assets/terraza.png'},
-  {image: '/assets/last.png'},
+  {image: foodImage},
+  {image: boqueronesImage},
+  {image: paellaImage},
+  {image: langostaImage},
+  {image: berenjenaImage},
+  {image: terrazaImage},
 ];
 
 export const siteContent = {
@@ -76,22 +84,22 @@ export const siteContent = {
       title: 'Firma gastronomica entre mar y brasa',
       items: [
         {
-          title: 'Espetos de Sardina',
+          title: 'Boquerones de Malaga',
           description:
-            'La tradicion malaguena en su mejor version: fuego vivo, punto exacto y sabor limpio.',
-          image: '/assets/food.png',
+            'Pescado fresco preparado al momento con tecnica precisa y sabor costero autentico.',
+          image: boqueronesImage,
         },
         {
           title: 'Paella Marinera',
           description:
             'Arroz meloso de marisco con fondo intenso y acabado fino para compartir sin prisa.',
-          image: '/assets/food3.png',
+          image: paellaImage,
         },
         {
-          title: 'Pulpo a la Brasa',
+          title: 'Langosta a la Plancha',
           description:
-            'Pulpo tierno, marcado al carbon y terminado con aceite de oliva virgen extra.',
-          image: '/assets/food4.png',
+            'Textura suave, marcado de plancha y un final limpio con aceite de oliva virgen extra.',
+          image: langostaImage,
         },
       ],
     },
@@ -100,11 +108,11 @@ export const siteContent = {
       title: 'Instantes de cocina, mar y sobremesa',
       items: [
         {label: 'Espetos', ...sharedGallery[0]},
-        {label: 'Fritura', ...sharedGallery[1]},
-        {label: 'Marisco', ...sharedGallery[2]},
-        {label: 'Pulpo', ...sharedGallery[3]},
-        {label: 'Terraza', ...sharedGallery[4]},
-        {label: 'Atardecer', ...sharedGallery[5]},
+        {label: 'Boquerones', ...sharedGallery[1]},
+        {label: 'Paella', ...sharedGallery[2]},
+        {label: 'Langosta', ...sharedGallery[3]},
+        {label: 'Berenjena', ...sharedGallery[4]},
+        {label: 'Terraza', ...sharedGallery[5]},
       ],
     },
     contact: {
@@ -113,6 +121,14 @@ export const siteContent = {
       phoneLabel: 'Telefono',
       addressLabel: 'Direccion',
       address: 'Paseo Maritimo Antonio Machado 67, Malaga',
+      mapTitle: 'Ubicacion en Google Maps',
+      mapLinkLabel: 'Abrir mapa',
+      mapEmbedUrl:
+        'https://www.google.com/maps?q=Paseo+Maritimo+Antonio+Machado+67+Malaga&output=embed',
+      mapExternalUrl:
+        'https://www.google.com/maps/search/?api=1&query=Paseo+Maritimo+Antonio+Machado+67+Malaga',
+      closingImage: lastImage,
+      closingImageAlt: 'Vista final junto al mar en La Pacheca',
       form: {
         name: 'Nombre',
         email: 'Email',
@@ -192,20 +208,21 @@ export const siteContent = {
       title: 'Signature cuisine between sea and embers',
       items: [
         {
-          title: 'Sardine Espetos',
+          title: 'Malaga Anchovies',
           description:
-            'A Malaga icon at its best: open-fire grilling, perfect point and clean flavor.',
-          image: '/assets/food.png',
+            'Freshly prepared local fish with precise cooking and authentic coastal flavor.',
+          image: boqueronesImage,
         },
         {
           title: 'Seafood Paella',
           description: 'Rich seafood rice with deep flavor and a polished finish for sharing.',
-          image: '/assets/food3.png',
+          image: paellaImage,
         },
         {
-          title: 'Grilled Octopus',
-          description: 'Tender octopus, charcoal-seared and finished with extra virgin olive oil.',
-          image: '/assets/food4.png',
+          title: 'Grilled Lobster',
+          description:
+            'Delicate texture, seared finish and extra virgin olive oil for a clean Mediterranean profile.',
+          image: langostaImage,
         },
       ],
     },
@@ -214,11 +231,11 @@ export const siteContent = {
       title: 'Moments of cuisine, sea views and long table talks',
       items: [
         {label: 'Espetos', ...sharedGallery[0]},
-        {label: 'Fried fish', ...sharedGallery[1]},
-        {label: 'Seafood', ...sharedGallery[2]},
-        {label: 'Octopus', ...sharedGallery[3]},
-        {label: 'Terrace', ...sharedGallery[4]},
-        {label: 'Sunset', ...sharedGallery[5]},
+        {label: 'Anchovies', ...sharedGallery[1]},
+        {label: 'Paella', ...sharedGallery[2]},
+        {label: 'Lobster', ...sharedGallery[3]},
+        {label: 'Aubergine', ...sharedGallery[4]},
+        {label: 'Terrace', ...sharedGallery[5]},
       ],
     },
     contact: {
@@ -227,6 +244,14 @@ export const siteContent = {
       phoneLabel: 'Phone',
       addressLabel: 'Address',
       address: 'Paseo Maritimo Antonio Machado 67, Malaga',
+      mapTitle: 'Location on Google Maps',
+      mapLinkLabel: 'Open map',
+      mapEmbedUrl:
+        'https://www.google.com/maps?q=Paseo+Maritimo+Antonio+Machado+67+Malaga&output=embed',
+      mapExternalUrl:
+        'https://www.google.com/maps/search/?api=1&query=Paseo+Maritimo+Antonio+Machado+67+Malaga',
+      closingImage: lastImage,
+      closingImageAlt: 'Closing seaside moment at La Pacheca',
       form: {
         name: 'Name',
         email: 'Email',
@@ -308,20 +333,21 @@ export const siteContent = {
       title: 'Signature-Kuche zwischen Meer und Glut',
       items: [
         {
-          title: 'Sardinen-Espetos',
+          title: 'Boquerones aus Malaga',
           description:
-            'Malagas Klassiker vom offenen Feuer, perfekt gegrillt und voller Kustengeschmack.',
-          image: '/assets/food.png',
+            'Frischer Fisch, punktgenau zubereitet, mit authentischem Geschmack der andalusischen Kuste.',
+          image: boqueronesImage,
         },
         {
           title: 'Meeresfruchte-Paella',
           description: 'Cremiger Reis mit intensivem Meeresaroma, ideal zum Teilen.',
-          image: '/assets/food3.png',
+          image: paellaImage,
         },
         {
-          title: 'Oktopus vom Grill',
-          description: 'Zarter Oktopus, auf Holzkohle markiert und mit Olivenol serviert.',
-          image: '/assets/food4.png',
+          title: 'Languste von der Plancha',
+          description:
+            'Feine Textur, kurz angegrillt und mit extra nativem Olivenol mediterran vollendet.',
+          image: langostaImage,
         },
       ],
     },
@@ -330,11 +356,11 @@ export const siteContent = {
       title: 'Momente aus Kuche, Meerblick und langen Abenden',
       items: [
         {label: 'Espetos', ...sharedGallery[0]},
-        {label: 'Frittierter Fisch', ...sharedGallery[1]},
-        {label: 'Meeresfruchte', ...sharedGallery[2]},
-        {label: 'Oktopus', ...sharedGallery[3]},
-        {label: 'Terrasse', ...sharedGallery[4]},
-        {label: 'Sonnenuntergang', ...sharedGallery[5]},
+        {label: 'Boquerones', ...sharedGallery[1]},
+        {label: 'Paella', ...sharedGallery[2]},
+        {label: 'Languste', ...sharedGallery[3]},
+        {label: 'Aubergine', ...sharedGallery[4]},
+        {label: 'Terrasse', ...sharedGallery[5]},
       ],
     },
     contact: {
@@ -343,6 +369,14 @@ export const siteContent = {
       phoneLabel: 'Telefon',
       addressLabel: 'Adresse',
       address: 'Paseo Maritimo Antonio Machado 67, Malaga',
+      mapTitle: 'Standort in Google Maps',
+      mapLinkLabel: 'Karte offnen',
+      mapEmbedUrl:
+        'https://www.google.com/maps?q=Paseo+Maritimo+Antonio+Machado+67+Malaga&output=embed',
+      mapExternalUrl:
+        'https://www.google.com/maps/search/?api=1&query=Paseo+Maritimo+Antonio+Machado+67+Malaga',
+      closingImage: lastImage,
+      closingImageAlt: 'Abendstimmung am Meer bei La Pacheca',
       form: {
         name: 'Name',
         email: 'E-Mail',

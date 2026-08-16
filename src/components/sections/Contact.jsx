@@ -1,11 +1,12 @@
 import Reveal from '../ui/Reveal';
+import SmartImage from '../ui/SmartImage';
 
 function Contact({section}) {
   return (
     <section
       id='contact'
       className='section-padding pt-6'>
-      <div className='container-page grid gap-8 lg:grid-cols-[0.95fr_1.05fr]'>
+      <div className='container-page grid gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-stretch'>
         <Reveal>
           <article className='card-shell p-8'>
             <p className='section-kicker'>{section.kicker}</p>
@@ -27,13 +28,24 @@ function Contact({section}) {
                 {section.address}
               </p>
             </div>
+
+            <div className='mt-6 overflow-hidden rounded-[1.7rem]'>
+              <SmartImage
+                src={section.closingImage}
+                alt={section.closingImageAlt}
+                className='h-52 w-full object-cover sm:h-60'
+                fallbackLabel='Closing image'
+              />
+            </div>
           </article>
         </Reveal>
 
-        <Reveal delay={120}>
-          <article className='glass-panel p-4'>
+        <Reveal
+          delay={120}
+          className='h-full'>
+          <article className='glass-panel h-full p-4'>
             <form
-              className='rounded-[1.7rem] bg-white p-6 sm:p-8'
+              className='flex h-full flex-col rounded-[1.7rem] bg-white p-6 sm:p-8'
               onSubmit={(event) => event.preventDefault()}>
               <div className='grid gap-5'>
                 <div>
@@ -88,6 +100,33 @@ function Contact({section}) {
                 </button>
               </div>
             </form>
+          </article>
+        </Reveal>
+
+        <Reveal
+          delay={180}
+          className='lg:col-span-2'>
+          <article className='overflow-hidden rounded-[1.7rem] border border-sand-200 bg-white shadow-soft'>
+            <div className='flex items-center justify-between gap-3 px-5 py-4'>
+              <p className='text-sm font-bold uppercase tracking-[0.2em] text-sea-700'>
+                {section.mapTitle}
+              </p>
+              <a
+                href={section.mapExternalUrl}
+                target='_blank'
+                rel='noopener noreferrer'
+                className='text-xs font-semibold uppercase tracking-[0.16em] text-sea-700 transition hover:text-sea-500'>
+                {section.mapLinkLabel}
+              </a>
+            </div>
+
+            <iframe
+              title={section.mapTitle}
+              src={section.mapEmbedUrl}
+              loading='lazy'
+              referrerPolicy='no-referrer-when-downgrade'
+              className='h-72 w-full border-0 sm:h-80 lg:h-[26rem]'
+            />
           </article>
         </Reveal>
       </div>
